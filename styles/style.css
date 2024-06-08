@@ -1,0 +1,66 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body {
+    font-family: 'Pretendard';
+    margin: 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: centr;
+}
+
+.chart-container {
+    width: 80%;
+    margin: 20px 0;
+}
+
+.scroll-x {
+    width: 98%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scroll-x::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.chart-wrapper {
+    width: 4100px; /* 스크롤을 위한 넓이 */
+    height: 800px;
+    position: relative;
+    overflow: hidden;  /* 애니메이션 시 요소가 흐르지 않도록 설정 */
+}
+
+.triangle {
+    stroke: none;
+    opacity: 0;
+    animation: appear 0.05s forwards;
+}
+
+.svg-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+svg {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+}
+
+/* 애니메이션 정의 */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
