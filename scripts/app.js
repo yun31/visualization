@@ -14,7 +14,7 @@ const triangleColors = ['#FFBEBE', '#A1CBF2', '#A5E380', '#F1FF9D', '#C6C8FF', '
 const svgWidth = 3800;  // 충분히 큰 너비 설정
 const svgHeight = 700;  // 높이를 조정하여 여백 최소화
 const triangleHeight = 100;
-const margin = { top: 10, right: 50, bottom: 20, left: 150 };  
+const margin = { top: 10, right: 50, bottom: 20, left: 150 }; 
 
 const svg = d3.select("#triangle-graph")
     .attr("width", svgWidth + margin.left + margin.right)
