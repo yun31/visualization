@@ -14,8 +14,36 @@ body {
     margin: 20px 0;
 }
 
+.container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.labels {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    height: 100%;
+}
+
+.label {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 14px; /* 라벨 간의 간격을 제거 */
+    white-space: nowrap;
+}
+
 .scroll-x {
-    width: 98%;
+    width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -29,8 +57,8 @@ body {
 }
 
 .chart-wrapper {
-    width: 4100px; /* 스크롤을 위한 넓이 */
-    height: 800px;
+    width: 7600px; /* 스크롤을 위한 넓이 */
+    height: 720px;
     position: relative;
     overflow: hidden;  /* 애니메이션 시 요소가 흐르지 않도록 설정 */
 }
