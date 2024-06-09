@@ -66,11 +66,12 @@ const universities = [
 const triangleSizes = [25, 40, 70, 130, 250, 500, 750];
 const triangleColors = ['#FFBEBE', '#A1CBF2', '#A5E380', '#F1FF9D', '#C6C8FF', '#F2BEFF', '#FFDE9D'];
 
-const svgWidth = 3800;  // 충분히 큰 너비 설정
-const svgHeight = 700;  // 높이를 조정하여 여백 최소화
+const svgWidth = 3800;  // Sufficient width
+const svgHeight = 700;  // Adjust height to minimize margin
 const triangleHeight = 100;
-const margin = { top: 20, right: 50, bottom: 20, left: 20 }; // 왼쪽 여백을 줄이기 위해 left 값을 조정
+const margin = { top: 20, right: 50, bottom: 20, left: 20 }; // Adjust left margin to reduce space
 
+// Create SVG
 const svg = d3.select("#triangle-graph")
     .attr("width", svgWidth + margin.left + margin.right)
     .attr("height", svgHeight + margin.top + margin.bottom)
@@ -78,6 +79,7 @@ const svg = d3.select("#triangle-graph")
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
+// Draw triangles for each university
 universities.forEach((uni, i) => {
     const group = svg.append("g").attr("transform", `translate(0, ${i * 150})`);
     
@@ -89,7 +91,7 @@ universities.forEach((uni, i) => {
         .attr("points", (d, j) => {
             const size = triangleSizes[d];
             const direction = j % 2 === 0 ? 'up' : 'down';
-            const x = (j > 0 ? d3.sum(uni.values.slice(0, j).map(val => triangleSizes[val])) : 0);  // 누적 너비 계산
+            const x = (j > 0 ? d3.sum(uni.values.slice(0, j).map(val => triangleSizes[val])) : 0);  // Calculate cumulative width
             if (direction === 'up') {
                 return `${x},${triangleHeight} ${x},0 ${x + size},0`;
             } else {
@@ -97,15 +99,16 @@ universities.forEach((uni, i) => {
             }
         })
         .attr("fill", d => triangleColors[d])
-        .style("animation-delay", (d, j) => `${j * 0.1}s`);  // 삼각형 애니메이션 지연 시간 설정
+        .style("animation-delay", (d, j) => `${j * 0.1}s`);  // Set animation delay for triangles
 });
 
 // Append logo for each university
 universities.forEach((uni, i) => {
-    const label = d3.select(".labels").append("div")
+    d3.select(".labels").append("div")
         .attr("class", "label")
         .append("img")
         .attr("src", uni.logo)
-        .style("height", "100px")  // 로고 이미지의 크기 조정
+        .attr("alt", `${uni.name} logo`)  // Add alt attribute for accessibility
+        .style("height", "100px")  // Adjust logo image size
         .style("width", "auto");
 });
