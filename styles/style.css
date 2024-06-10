@@ -44,6 +44,29 @@ p {
     line-height: 1.6;
 }
 
+.chart-name {
+    text-align: left; 
+    margin-bottom: 36px; 
+    margin-left: 30px; 
+    font-weight: bold; 
+    color: #32386A"
+}
+
+.chart-name h1 {
+    position: relative;
+    font-weight: 600;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.chart-name svg {
+    position: absolute;
+    transform: translateY(55%);
+    z-index: 0;
+}
+
 .scroll-indicator {
     display: flex;
     flex-direction: column;
