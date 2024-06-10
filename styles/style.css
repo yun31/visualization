@@ -224,7 +224,7 @@ svg {
     display: flex;
     flex-direction: column;
     background-color: white;
-    padding: 50px;
+    padding: 50px 0 50px 50px;
     border-radius: 50px;
 }
 
@@ -242,19 +242,19 @@ svg {
     background-color: white;
     border: 2px solid #A0B1FF;
     border-radius: 50px;
+    box-shadow: 0 0 10px 10px #A0B1FF;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    padding: 10px;
     font-size: 18px;
-    padding: 50px;
+    line-height: 1.6;
 }
 
-/* large 클래스를 추가하여 특정 text-box의 너비를 890px로 설정합니다 */
-.right-box .text-box-primary.large {
+.right-box .text-box-primary {
     width: 910px;
+    margin-bottom: 50px;
 }
-
 
 .pie-charts-container {
     display: flex;
