@@ -15,12 +15,14 @@ document.addEventListener('scroll', function() {
 // Intersection Observer for animating chart1 and chart2
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
+        const scrollContainer = entry.target.closest('.scroll-x');
         if (entry.target.id === 'chart1-container') {
             document.querySelectorAll('#triangle-graph .triangle').forEach(triangle => {
                 if (entry.isIntersecting) {
                     triangle.classList.add('animate');
                 } else {
                     triangle.classList.remove('animate');
+                    if (scrollContainer) scrollContainer.scrollLeft = 0; // Reset horizontal scroll
                 }
             });
         } else if (entry.target.id === 'chart2-container') {
@@ -29,6 +31,7 @@ const observer = new IntersectionObserver(entries => {
                     triangle2.classList.add('expanded');
                 } else {
                     triangle2.classList.remove('expanded');
+                    if (scrollContainer) scrollContainer.scrollLeft = 0; // Reset horizontal scroll
                 }
             });
         }
