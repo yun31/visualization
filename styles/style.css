@@ -233,15 +233,9 @@ svg {
     margin-bottom: 50px;
 }
 
-/* 마지막 이미지 박스의 margin-bottom을 left-box의 padding 값과 동일하게 설정 */
-.left-box .image-box:last-child {
-    margin-bottom: 50px; /* left-box의 padding 값과 동일하게 설정 */
-}
-
 .right-box {
     display: flex;
     flex-direction: column;
-    padding: 50px
 }
 
 .text-box-primary {
@@ -253,11 +247,12 @@ svg {
     justify-content: center;
     margin-bottom: 10px;
     font-size: 18px;
+    padding: 50px;
 }
 
 /* large 클래스를 추가하여 특정 text-box의 너비를 890px로 설정합니다 */
 .right-box .text-box-primary.large {
-    width: 890px;
+    width: 910px;
 }
 
 
