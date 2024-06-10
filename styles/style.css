@@ -203,6 +203,95 @@ svg {
     }
 }
 
+.description {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 40px;
+    position: relative
+}
+
+.description .arrow-divider {
+    width:36px;
+}
+
+.description h1 {
+    margin-top: 35px;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.description h2 {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 45px;
+    padding: 0 0 0 80px; /* left-box와 right-box 사이 여백을 80px로 설정 */
+    gap: 80px; /* left-box와 right-box 사이 간격을 80px로 설정 */
+    width: 100%;
+    max-width: calc(100% - 80px); /* 양쪽 여백을 뺀 너비 */
+    box-sizing: border-box;
+}
+
+.left-box, .right-box {
+    margin: 0 auto;
+}
+
+.left-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* left-box 안의 내용물 중앙 정렬 */
+    background-color: white;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.left-box .image-box {
+    width: 446px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center; /* 이미지 중앙 정렬 */
+}
+
+/* 이미지 박스의 상하좌우 여백을 50px로 설정 */
+.left-box .image-box img {
+    margin: 50px;
+}
+
+.left-box .image-box:last-child {
+    margin-bottom: 0px; /* left-box의 마지막 이미지 박스 아래의 여백을 50px로 설정합니다 */
+}
+
+.right-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
+    width: 700px; /* 최소 너비 설정 */
+}
+
+.text-box-primary {
+    background-color: white;
+    border: 2px solid #A0B1FF;
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgba(160, 177, 255, 0.3); /* 투명도 30%인 그림자 추가 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px; /* 위아래 여백을 50px로 설정 */
+    font-size: 18px;
+    line-height: 1.6;
+    flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
+    min-width: 500px; /* 최소 너비 설정 */
+}
+
+.right-box .text-box-primary {
+    margin-bottom: 50px;
+}
 
 .pie-charts-container {
     display: flex;
