@@ -279,14 +279,20 @@ svg {
     border: 1px solid #A0B1FF;
     border-radius: 50px;
     box-shadow: 0 0 7px rgba(160, 177, 255, 0.5); /* 투명도 30%인 그림자 추가 */
-    display: flex;
+    /*display: flex; */
     align-items: center;
     justify-content: center;
+    /*flex-direction: row;*/
     padding: 40px 30px; /* 위아래 여백을 50px로 설정 */
     font-size: 18px;
     line-height: 1.6;
     flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
     min-width: 500px; /* 최소 너비 설정 */
+}
+
+.text-box-primary .highlight-text {
+    font-weight: 500;
+    color: #5874C7;
 }
 
 .right-box .text-box-primary {
