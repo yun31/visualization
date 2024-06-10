@@ -19,7 +19,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    color: #32386A;
 }
 
 h1 {
@@ -29,7 +29,7 @@ h1 {
 
 h2 {
     margin-top: 10px;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 32px;
 }
 
@@ -112,24 +112,24 @@ p {
 }
 
 .label.snu {
-    background-color: rgba(225, 187, 255, 0.5); /* 예: 서울대학교 */
+    background-color: rgba(225, 187, 255, 0.3); /* 예: 서울대학교 */
     
 }
 
 .label.yu {
-    background-color: rgba(178, 195, 255, 0.5); /* 예: 연세대학교 */
+    background-color: rgba(178, 195, 255, 0.3); /* 예: 연세대학교 */
 }
 
 .label.ku {
-    background-color: rgba(255, 157, 139, 0.5); /* 예: 고려대학교 */
+    background-color: rgba(255, 157, 139, 0.3); /* 예: 고려대학교 */
 }
 
 .label.ewu {
-    background-color: rgba(166, 255, 155, 0.5); /* 예: 이화여자대학교 */
+    background-color: rgba(166, 255, 155, 0.3); /* 예: 이화여자대학교 */
 }
 
 .label.stech {
-    background-color: rgba(255, 196, 128, 0.5); /* 예: 과학기술대학교 */
+    background-color: rgba(255, 196, 128, 0.3); /* 예: 과학기술대학교 */
 }
 
 .scroll-x {
