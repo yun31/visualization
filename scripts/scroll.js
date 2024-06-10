@@ -12,20 +12,25 @@ document.addEventListener('scroll', function() {
     }
 });
 
-// Intersection Observer for animating chart1
+// Intersection Observer for animating chart1 and chart2
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            if (entry.target.id === 'chart1-container') {
-                document.querySelectorAll('#triangle-graph .triangle').forEach(triangle => {
+        if (entry.target.id === 'chart1-container') {
+            document.querySelectorAll('#triangle-graph .triangle').forEach(triangle => {
+                if (entry.isIntersecting) {
                     triangle.classList.add('animate');
-                });
-            } else if (entry.target.id === 'chart2-container') {
-                document.querySelectorAll('#triangle-graph2 .triangle2').forEach(triangle2 => {
+                } else {
+                    triangle.classList.remove('animate');
+                }
+            });
+        } else if (entry.target.id === 'chart2-container') {
+            document.querySelectorAll('#triangle-graph2 .triangle2').forEach(triangle2 => {
+                if (entry.isIntersecting) {
                     triangle2.classList.add('expanded');
-                });
-            }
-            observer.unobserve(entry.target);
+                } else {
+                    triangle2.classList.remove('expanded');
+                }
+            });
         }
     });
 }, {
