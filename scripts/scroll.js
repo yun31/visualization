@@ -1,9 +1,14 @@
+// 페이지 로드 시 맨 위로 스크롤
+window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0);
+});
+
 document.addEventListener('scroll', function() {
     const scrollIndicator = document.querySelector('.scroll-indicator');
     if (window.scrollY > 0) {
-        scrollIndicator.style.display = 'none';
+        scrollIndicator.style.visibility = 'hidden';
     } else {
-        scrollIndicator.style.display = 'flex';
+        scrollIndicator.style.visibility = 'visible';
     }
 });
 

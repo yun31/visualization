@@ -1,8 +1,21 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    position: relative
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FBFBFD;
+}
+
 body {
     font-family: 'Pretendard';
-    margin: 16px;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -10,23 +23,25 @@ body {
 }
 
 h1 {
-    margin: 0;
-    padding: 10px 0;
+    margin-top: 100px;
+    font-size: 48px;
+}
+
+h2 {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 32px;
 }
 
 p {
-    margin-top: 0px;
+    margin-top: 100px;
     margin-bottom: 120px;
     margin-left: 240px;
     margin-right: 240px;
+    font-weight: 400;
     padding: 10px 0;
-}
-
-
-
-.intro {
-    text-align: center;
-    padding: 50px 20px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .scroll-indicator {
@@ -35,12 +50,13 @@ p {
     align-items: center;
     margin-top: 20px;
     font-size: 18px;
-    color: #000;
+    font-weight: 300;
+    color: #333;
 }
 
 .arrow {
     font-size: 24px;
-    margin-top: 10px;
+    margin-top: 14px;
     animation: bounce 2s infinite;
 }
 
@@ -79,14 +95,41 @@ p {
 }
 
 .label {
+    position: relative;
+    width: 120px;
     height: 120px;
+    margin: 14px 0;
+    border-radius: 50%;
+    background-color: #D4E9FE; /* 원하는 배경색으로 변경 */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 14px; /* 라벨 간의 간격을 제거 */
-    white-space: nowrap;
+}
+
+.label img {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.label.snu {
+    background-color: rgba(225, 187, 255, 0.5); /* 예: 서울대학교 */
+    
+}
+
+.label.yu {
+    background-color: rgba(178, 195, 255, 0.5); /* 예: 연세대학교 */
+}
+
+.label.ku {
+    background-color: rgba(255, 157, 139, 0.5); /* 예: 고려대학교 */
+}
+
+.label.ewu {
+    background-color: rgba(166, 255, 155, 0.5); /* 예: 이화여자대학교 */
+}
+
+.label.stech {
+    background-color: rgba(255, 196, 128, 0.5); /* 예: 과학기술대학교 */
 }
 
 .scroll-x {

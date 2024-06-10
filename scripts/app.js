@@ -64,7 +64,7 @@ const universities = [
 
 // Define triangle sizes and colors
 const triangleSizes = [25, 40, 70, 130, 250, 500, 750];
-const triangleColors = ['#FFBEBE', '#A1CBF2', '#A5E380', '#F1FF9D', '#C6C8FF', '#F2BEFF', '#FFDE9D'];
+const triangleColors = ['#5874C7', '#D4E9FE', '#32386A', '#FFE0E6', '#A0B1FF', '#FFBDFE', '#A8FFCA'];
 
 const svgWidth = 3800;  // Sufficient width
 const svgHeight = 700;  // Adjust height to minimize margin
@@ -105,7 +105,7 @@ universities.forEach((uni, i) => {
 // Append logo for each university
 universities.forEach((uni, i) => {
     d3.select(".labels").append("div")
-        .attr("class", "label")
+        .attr("class", `label ${uni.name}`)  // Add unique class for each university
         .append("img")
         .attr("src", uni.logo)
         .attr("alt", `${uni.name} logo`)  // Add alt attribute for accessibility
