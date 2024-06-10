@@ -44,6 +44,29 @@ p {
     line-height: 1.6;
 }
 
+.chart-name {
+    text-align: left; 
+    margin-bottom: 36px; 
+    margin-left: 30px; 
+    font-weight: bold; 
+    color: #32386A"
+}
+
+.chart-name h1 {
+    position: relative;
+    font-weight: 600;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.chart-name svg {
+    position: absolute;
+    transform: translateY(55%);
+    z-index: 0;
+}
+
 .scroll-indicator {
     display: flex;
     flex-direction: column;
@@ -242,7 +265,7 @@ svg {
 
 .line {
     position: absolute;
-    top: 200px;
+    top: 190px;
     left: 600px; /* 왼쪽 여백 고정 */
     opacity: 1; /* 초기 투명도 설정 */
     transition: opacity 0.4s ease; /* 투명도 변화를 0.3초 동안 부드럽게 설정 */
