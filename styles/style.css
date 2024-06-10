@@ -186,6 +186,29 @@ svg {
     }
 }
 
+.description {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    position: relative
+}
+
+.description .arrow-divider {
+    width:36px;
+    height:60px;
+}
+
+.description h1 {
+    margin-top: 60px;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.description h2 {
+    margin-top: 35px;
+    font-weight: 300;
+    font-size: 24px;
+}
 
 .pie-charts-container {
     display: flex;
