@@ -214,10 +214,10 @@ svg {
     justify-content: center;
     align-items: flex-start;
     margin-top: 45px;
-    padding: 0 50px; /* 양옆에 padding 50px 추가 */
-    gap: 50px; /* left-box와 right-box 사이 간격 설정 */
+    padding: 0 80px; /* left-box와 right-box 사이 여백을 80px로 설정 */
+    gap: 80px; /* left-box와 right-box 사이 간격을 80px로 설정 */
     width: 100%;
-    max-width: calc(100% - 100px); /* 양쪽 padding을 뺀 너비 */
+    max-width: calc(100% - 160px); /* 양쪽 여백을 뺀 너비 */
     box-sizing: border-box;
 }
 
@@ -241,6 +241,11 @@ svg {
     justify-content: center; /* 이미지 중앙 정렬 */
 }
 
+/* 이미지 박스의 상하좌우 여백을 50px로 설정 */
+.left-box .image-box img {
+    margin: 50px;
+}
+
 .right-box {
     display: flex;
     flex-direction: column;
@@ -252,11 +257,11 @@ svg {
     background-color: white;
     border: 2px solid #A0B1FF;
     border-radius: 50px;
-    box-shadow: 0 0 5px 0 #A0B1FF;
+    box-shadow: 0 0 5px rgba(160, 177, 255, 0.3); /* 투명도 30%인 그림자 추가 */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 50px; /* 위아래 여백을 50px로 설정 */
     font-size: 18px;
     line-height: 1.6;
     flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
@@ -266,7 +271,6 @@ svg {
 .right-box .text-box-primary {
     margin-bottom: 50px;
 }
-
 
 .pie-charts-container {
     display: flex;
