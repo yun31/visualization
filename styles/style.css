@@ -214,9 +214,11 @@ svg {
     justify-content: center;
     align-items: flex-start;
     margin-top: 45px;
+    padding: 0 50px; /* 양옆에 padding 50px 추가 */
+    gap: 50px; /* left-box와 right-box 사이 간격 설정 */
     width: 100%;
-    max-width: 100%; /* 페이지의 너비를 초과하지 않도록 설정 */
-    box-sizing: border-box; /* padding과 border를 포함하여 너비를 계산 */
+    max-width: calc(100% - 100px); /* 양쪽 padding을 뺀 너비 */
+    box-sizing: border-box;
 }
 
 .left-box, .right-box {
@@ -226,20 +228,24 @@ svg {
 .left-box {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* left-box 안의 내용물 중앙 정렬 */
     background-color: white;
-    padding: 50px 0 50px 50px;
+    padding: 50px;
     border-radius: 50px;
 }
 
 .left-box .image-box {
     width: 446px;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center; /* 이미지 중앙 정렬 */
 }
 
 .right-box {
     display: flex;
     flex-direction: column;
+    flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
+    min-width: 500px; /* 최소 너비 설정 */
 }
 
 .text-box-primary {
@@ -253,11 +259,14 @@ svg {
     padding: 10px;
     font-size: 18px;
     line-height: 1.6;
+    flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
+    min-width: 500px; /* 최소 너비 설정 */
 }
 
 .right-box .text-box-primary {
     margin-bottom: 50px;
 }
+
 
 .pie-charts-container {
     display: flex;
