@@ -217,7 +217,6 @@ svg {
     width: 100%;
     max-width: 100%; /* 페이지의 너비를 초과하지 않도록 설정 */
     box-sizing: border-box; /* padding과 border를 포함하여 너비를 계산 */
-    margin: 0 auto; /* 중앙 정렬 */
 }
 
 .left-box, .right-box {
