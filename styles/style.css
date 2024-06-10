@@ -259,11 +259,6 @@ svg {
     margin-bottom: 50px;
 }
 
-/* large 클래스를 추가하여 특정 text-box의 너비를 890px로 설정합니다 */
-.right-box .text-box-primary.large {
-    width: 890px;
-}
-
 .pie-charts-container {
     display: flex;
     justify-content: space-around;
