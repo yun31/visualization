@@ -214,10 +214,10 @@ svg {
     justify-content: center;
     align-items: flex-start;
     margin-top: 45px;
-    padding: 0 80px; /* left-box와 right-box 사이 여백을 80px로 설정 */
+    padding: 0 0 0 80px; /* left-box와 right-box 사이 여백을 80px로 설정 */
     gap: 80px; /* left-box와 right-box 사이 간격을 80px로 설정 */
     width: 100%;
-    max-width: calc(100% - 160px); /* 양쪽 여백을 뺀 너비 */
+    max-width: calc(100% - 80px); /* 양쪽 여백을 뺀 너비 */
     box-sizing: border-box;
 }
 
@@ -254,7 +254,7 @@ svg {
     display: flex;
     flex-direction: column;
     flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
-    min-width: 500px; /* 최소 너비 설정 */
+    width: 700px; /* 최소 너비 설정 */
 }
 
 .text-box-primary {
