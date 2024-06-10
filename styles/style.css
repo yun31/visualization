@@ -164,7 +164,7 @@ p {
 }
 
 .chart-wrapper {
-    width: 7600px; /* 스크롤을 위한 넓이 */
+    width: 7400px; /* 스크롤을 위한 넓이 */
     height: 720px;
     position: relative;
     overflow: hidden;  /* 애니메이션 시 요소가 흐르지 않도록 설정 */
@@ -236,6 +236,13 @@ svg {
     width: 100%;
     max-width: calc(100% - 80px); /* 양쪽 여백을 뺀 너비 */
     box-sizing: border-box;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    top: 200px;
+    left: 600px; /* 왼쪽 여백 고정 */
 }
 
 .left-box, .right-box {
