@@ -213,11 +213,11 @@ svg {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 45px;
 }
 
 .left-box, .right-box {
-    margin: 0 100px;
+    margin: 0 80px;
 }
 
 .left-box {
@@ -230,12 +230,18 @@ svg {
 
 .left-box .image-box {
     width: 446px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+/* 마지막 이미지 박스의 margin-bottom을 left-box의 padding 값과 동일하게 설정 */
+.left-box .image-box:last-child {
+    margin-bottom: 50px; /* left-box의 padding 값과 동일하게 설정 */
 }
 
 .right-box {
     display: flex;
     flex-direction: column;
+    padding: 50px
 }
 
 .text-box-primary {
