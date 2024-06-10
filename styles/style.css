@@ -288,6 +288,7 @@ svg {
     line-height: 1.6;
     flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
     min-width: 500px; /* 최소 너비 설정 */
+    max-width: 800px;
 }
 
 .text-box-primary .highlight-text {
