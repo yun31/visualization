@@ -170,12 +170,12 @@ const categoryColors = {
     'A': '#E1E2E5',
     'B': '#99A0B3',
     'C': '#656E80',
-    'D': 'rgba(248, 23, 62, 0.15)',
-    'E': 'rgba(248, 23, 62, 0.50)',
+    'D': 'rgba(248, 23, 62, 0.30)',
+    'E': 'rgba(248, 23, 62, 0.60)',
     'F': '#F8173E'
 };
 
-const svgWidth = 3800;  // Sufficient width
+const svgWidth = 3400;  // Sufficient width
 const svgHeight = 700;  // Adjust height to minimize margin
 const triangleHeight = 100;
 const margin = { top: 20, right: 50, bottom: 20, left: 20 }; // Adjust left margin to reduce space
