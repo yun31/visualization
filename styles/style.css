@@ -233,6 +233,7 @@ svg {
     margin-top: 45px;
     padding: 0 0 0 80px; /*왼쪽 여백 80px*/
     gap: 145px; /* left-box와 right-box 사이 간격 */
+    transition: gap 0.4s ease; /* gap 변화를 0.3초 동안 부드럽게 설정 */
     width: 100%;
     max-width: calc(100% - 80px); /* 왼쪽 고정 여백을 뺀 너비 */
     box-sizing: border-box;
@@ -243,6 +244,17 @@ svg {
     position: absolute;
     top: 200px;
     left: 600px; /* 왼쪽 여백 고정 */
+    opacity: 1; /* 초기 투명도 설정 */
+    transition: opacity 0.4s ease; /* 투명도 변화를 0.3초 동안 부드럽게 설정 */
+}
+
+@media screen and (max-width: 1400px) {
+    .line {
+        opacity: 0; /* 화면이 1400px 이하일 때 선을 숨김 */
+    }
+    .content {
+        gap: 50px;
+    }
 }
 
 .left-box, .right-box {
@@ -295,8 +307,8 @@ svg {
     font-size: 18px;
     line-height: 1.6;
     flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
-    min-width: 500px; /* 최소 너비 설정 */
-    max-width: 800px;
+    min-width: 400px; /* 최소 너비 설정 */
+    /* max-width: 800px; */
 }
 
 .text-box-primary .highlight-text {
