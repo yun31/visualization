@@ -16,9 +16,15 @@ document.addEventListener('scroll', function() {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            document.querySelectorAll('#triangle-graph .triangle').forEach(triangle => {
-                triangle.classList.add('animate');
-            });
+            if (entry.target.id === 'chart1-container') {
+                document.querySelectorAll('#triangle-graph .triangle').forEach(triangle => {
+                    triangle.classList.add('animate');
+                });
+            } else if (entry.target.id === 'chart2-container') {
+                document.querySelectorAll('#triangle-graph2 .triangle').forEach(triangle => {
+                    triangle.classList.add('animate');
+                });
+            }
             observer.unobserve(entry.target);
         }
     });
@@ -26,7 +32,13 @@ const observer = new IntersectionObserver(entries => {
     threshold: 0.1
 });
 
+
 const chart1Container = document.getElementById('chart1-container');
 if (chart1Container) {
     observer.observe(chart1Container);
+}
+
+const chart2Container = document.getElementById('chart2-container');
+if (chart2Container) {
+    observer.observe(chart2Container);
 }

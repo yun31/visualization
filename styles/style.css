@@ -49,9 +49,10 @@ p {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 10px;
     font-size: 18px;
     font-weight: 300;
-    color: #333;
+    color: #32386A;
 }
 
 .arrow {
@@ -77,6 +78,11 @@ p {
     margin: 20px 0;
 }
 
+.chart2-container {
+    width: 80%;
+    margin: 20px 0;
+}
+
 .container {
     display: flex;
     align-items: flex-start;
@@ -84,6 +90,17 @@ p {
 }
 
 .labels {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    height: 100%;
+}
+
+.labels2 {
     position: sticky;
     left: 0;
     top: 0;
