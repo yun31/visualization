@@ -350,6 +350,7 @@ svg {
 }
 
 .left-box, .right-box {
+    position: relative;
     margin: 0 auto;
 }
 
