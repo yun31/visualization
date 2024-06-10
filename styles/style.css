@@ -242,7 +242,7 @@ svg {
     background-color: white;
     border: 2px solid #A0B1FF;
     border-radius: 50px;
-    box-shadow: 0 0 10px 10px #A0B1FF;
+    box-shadow: 0 0 5px 0 #A0B1FF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,7 +252,7 @@ svg {
 }
 
 .right-box .text-box-primary {
-    width: 910px;
+    width: 890px;
     margin-bottom: 50px;
 }
 
