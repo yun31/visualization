@@ -214,10 +214,14 @@ svg {
     justify-content: center;
     align-items: flex-start;
     margin-top: 45px;
+    width: 100%;
+    max-width: 100%; /* 페이지의 너비를 초과하지 않도록 설정 */
+    box-sizing: border-box; /* padding과 border를 포함하여 너비를 계산 */
+    margin: 0 auto; /* 중앙 정렬 */
 }
 
 .left-box, .right-box {
-    margin: 0 80px;
+    margin: 0 40px;
 }
 
 .left-box {
@@ -252,8 +256,12 @@ svg {
 }
 
 .right-box .text-box-primary {
-    width: 890px;
     margin-bottom: 50px;
+}
+
+/* large 클래스를 추가하여 특정 text-box의 너비를 890px로 설정합니다 */
+.right-box .text-box-primary.large {
+    width: 890px;
 }
 
 .pie-charts-container {
