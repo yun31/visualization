@@ -221,13 +221,15 @@ universities.forEach((uni, i) => {
 
 // Draw triangles for each university (category-based colors)
 universities.forEach((uni, i) => {
-    const group = svgCategory.append("g").attr("transform", `translate(0, ${i * 150})`);
+    const group = svgCategory.append("g")
+    .attr("class", "graph-group")
+    .attr("transform", `translate(0, ${i * 150})`);
     
     group.selectAll("polygon")
         .data(uni.values)
         .enter()
         .append("polygon")
-        .attr("class", "triangle")
+        .attr("class", "triangle2")
         .attr("points", (d, j) => {
             const size = d.size;
             const direction = j % 2 === 0 ? 'up' : 'down';
@@ -239,7 +241,6 @@ universities.forEach((uni, i) => {
             }
         })
         .attr("fill", d => categoryColors[d.category])
-        .style("animation-delay", (d, j) => `${j * 0.1}s`);  // Set animation delay for triangles
 });
 
 // Append logos for each university (for both graphs)

@@ -21,8 +21,8 @@ const observer = new IntersectionObserver(entries => {
                     triangle.classList.add('animate');
                 });
             } else if (entry.target.id === 'chart2-container') {
-                document.querySelectorAll('#triangle-graph2 .triangle').forEach(triangle => {
-                    triangle.classList.add('animate');
+                document.querySelectorAll('#triangle-graph2 .triangle2').forEach(triangle2 => {
+                    triangle2.classList.add('expanded');
                 });
             }
             observer.unobserve(entry.target);
@@ -42,3 +42,19 @@ const chart2Container = document.getElementById('chart2-container');
 if (chart2Container) {
     observer.observe(chart2Container);
 }
+
+// Toggle animation button
+document.getElementById('toggle-animation').addEventListener('click', () => {
+    const triangles2 = document.querySelectorAll('#triangle-graph2 .triangle2');
+    triangles2.forEach(triangle2 => {
+        triangle2.classList.remove('expanded');
+        triangle2.classList.add('compressed');
+    });
+
+    setTimeout(() => {
+        triangles2.forEach(triangle2 => {
+            triangle2.classList.remove('compressed');
+            triangle2.classList.add('expanded');
+        });
+    }, 2000); // 3초 후에 다시 원래 크기로 돌아감
+});

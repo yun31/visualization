@@ -201,6 +201,7 @@ p {
     overflow: hidden;  /* 애니메이션 시 요소가 흐르지 않도록 설정 */
 }
 
+
 .triangle {
     stroke: none;
     opacity: 0;
@@ -208,6 +209,60 @@ p {
 
 .triangle.animate {
     animation: appear 0.05s forwards;
+}
+
+@keyframes expandWidth {
+    from {
+        transform: scaleX(0.167); /* 1/6 크기 */
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes compressWidth {
+    from {
+        transform: scaleX(1);
+    }
+    to {
+        transform: scaleX(0.167); /* 1/6 크기 */
+    }
+}
+
+.triangle2 {
+    transform-origin: left center;
+    transform: scaleX(0.167); /* 초기 상태를 1/6 크기로 */
+}
+
+.triangle2.expanded {
+    animation: expandWidth 3s forwards;
+    animation-delay: 1s;
+}
+
+.triangle2.compressed {
+    transform: scaleX(0.167);
+}
+
+#controls {
+    position: absolute;
+    top: -65px; /* `chart2-container`의 위쪽 간격 */
+    right: 60px; /* `chart2-container`의 오른쪽 간격 */
+    z-index: 10;
+}
+
+#toggle-animation {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(160, 177, 255, 0);
+    color: rgb(100, 128, 255);
+    border: 1px solid rgba(160, 177, 255, 1);
+    border-radius: 100px;
+    transition: background-color 0.2s;
+}
+
+#toggle-animation:hover {
+    background-color: rgba(160, 177, 255, 0.15);
 }
 
 .svg-container {
