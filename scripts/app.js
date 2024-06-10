@@ -1,7 +1,7 @@
-// Data
+// Data for universities
 const universities = [
     {
-        name: '서울대',
+        name: 'snu',
         logo: 'images/snu.png',
         values: [
             ...Array(38).fill(0),
@@ -11,10 +11,10 @@ const universities = [
             ...Array(6).fill(4),
             ...Array(2).fill(5),
             ...Array(3).fill(6)
-        ].sort(() => Math.random() - 0.5)
+        ].sort(() => Math.random() - 0.5),
     },
     {
-        name: '연세대',
+        name: 'yu',
         logo: 'images/yu.png',
         values: [
             ...Array(32).fill(0),
@@ -23,10 +23,10 @@ const universities = [
             ...Array(11).fill(3),
             ...Array(3).fill(4),
             ...Array(1).fill(6)
-        ].sort(() => Math.random() - 0.5)
+        ].sort(() => Math.random() - 0.5),
     },
     {
-        name: '고려대',
+        name: 'ku',
         logo: 'images/ku.png',
         values: [
             ...Array(28).fill(0),
@@ -34,10 +34,10 @@ const universities = [
             ...Array(11).fill(2),
             ...Array(13).fill(3),
             ...Array(3).fill(4)
-        ].sort(() => Math.random() - 0.5)
+        ].sort(() => Math.random() - 0.5),
     },
     {
-        name: '이화여대',
+        name: 'ewu',
         logo: 'images/ewu.png',
         values: [
             ...Array(24).fill(0),
@@ -46,10 +46,10 @@ const universities = [
             ...Array(10).fill(3),
             ...Array(2).fill(4),
             ...Array(1).fill(5)
-        ].sort(() => Math.random() - 0.5)
+        ].sort(() => Math.random() - 0.5),
     },
     {
-        name: '과기대',
+        name: 'stech',
         logo: 'images/stech.png',
         values: [
             ...Array(43).fill(0),
@@ -58,7 +58,7 @@ const universities = [
             ...Array(8).fill(3),
             ...Array(3).fill(4),
             ...Array(1).fill(5)
-        ].sort(() => Math.random() - 0.5)
+        ].sort(() => Math.random() - 0.5),
     }
 ];
 

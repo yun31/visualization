@@ -142,3 +142,16 @@ svg {
         transform: translateX(0);
     }
 }
+
+
+.pie-charts-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.pie-chart {
+    margin: 20px;
+    position: relative;
+}
