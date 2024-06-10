@@ -246,6 +246,10 @@ svg {
     margin: 50px;
 }
 
+.left-box .image-box:last-child {
+    margin-bottom: 0px; /* left-box의 마지막 이미지 박스 아래의 여백을 50px로 설정합니다 */
+}
+
 .right-box {
     display: flex;
     flex-direction: column;
