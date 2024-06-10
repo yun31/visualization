@@ -220,12 +220,13 @@ svg {
 }
 
 .left-box, .right-box {
-    margin: 0 40px;
+    margin: 0 auto;
 }
 
 .left-box {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: white;
     padding: 50px 0 50px 50px;
     border-radius: 50px;
