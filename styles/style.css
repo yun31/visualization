@@ -422,6 +422,23 @@ svg {
     margin-right: 30px;
 }
 
+.text-box-pink {
+    background-color: white;
+    border: 1px solid #FFBDFE;
+    border-radius: 50px;
+    box-shadow: 0 0 7px rgba(255,189,254, 0.5); /* 투명도 30%인 그림자 추가 */
+    /*display: flex; */
+    align-items: center;
+    justify-content: center;
+    /*flex-direction: row;*/
+    padding: 40px 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
+    min-width: 400px; /* 최소 너비 설정 */
+    /* max-width: 800px; */
+}
+
 .pie-charts-container {
     display: flex;
     justify-content: space-around;
