@@ -499,13 +499,13 @@ svg {
 
 .description-box {
     flex: 3;
-    padding: 12px;
+    padding: 6px;
     background-color: #F3F5FF;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(160, 177, 255, 0.4);
-    margin: 8px;
     margin-right: 60px;
     margin-left: 60px;
+    margin-top: 40px;
 }
 
 .legend {
@@ -535,17 +535,47 @@ svg {
 }
 
 .pie-box {
-    flex: 7
+    flex: 7;
+    margin: 0;
+    padding: 0;
 }
 
 .pie-charts-container {
+    position: relative;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 8px;
+    padding: 0;
 }
 
 .pie-chart {
-    margin: 0px;
-    position: relative;
+    margin: 0;
+    padding: 0;
+    position: absolute;
 }
+
+#pie-chart-snu {
+    top: -30px; 
+    left: -20px; 
+}
+
+#pie-chart-yu {
+    top: 20px;  
+    left: 240px; 
+}
+
+#pie-chart-ku {
+    top: -20px;  
+    left: 550px; 
+}
+
+#pie-chart-ewu {
+    top: 300px; 
+    left: 480px; 
+}
+ㄴ
+#pie-chart-stech {
+    top: 20px;
+    left: -100px
+}
+

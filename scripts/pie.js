@@ -139,11 +139,11 @@ const stechData = [
 ];
 
 const universitiesData = [
-    { name: 'snu', displayName: '서울대학교', data: snuData, diameter: 334*0.8, color: 'rgba(225, 187, 255, 0.2)', borderColor: 'rgba(225, 187, 255, 1)', trueColor: 'rgba(225, 187, 255, 0.5)' },
-    { name: 'yu', displayName: '연세대학교', data: yuData, diameter: 410*0.8, color: 'rgba(178, 195, 255, 0.2)', borderColor: 'rgba(178, 195, 255, 1)', trueColor: 'rgba(178, 195, 255, 0.5)' },
-    { name: 'ku', displayName: '고려대학교', data: kuData, diameter: 402*0.8, color: 'rgba(255, 157, 139, 0.2)', borderColor: 'rgba(255, 157, 139, 1)', trueColor: 'rgba(255, 157, 139, 0.5)' },
-    { name: 'ewu', displayName: '이화여자대학교', data: ewuData, diameter: 314*0.8, color: 'rgba(166, 255, 155, 0.2)', borderColor: 'rgba(166, 255, 155, 1)', trueColor: 'rgba(166, 255, 155, 0.5)' },
-    { name: 'stech', displayName: '서울과학기술대학교', data: stechData, diameter: 402*0.8, color: 'rgba(255, 196, 128, 0.2)', borderColor: 'rgba(255, 196, 128, 1)', trueColor: 'rgba(255, 196, 128, 0.5)' }
+    { name: 'snu', displayName: '서울대학교', data: snuData, diameter: 334*0.8, color: 'rgba(225, 187, 255, 0.2)', borderColor: 'rgba(225, 187, 255, 1)', trueColor: 'rgba(225, 187, 255, 0.7)' },
+    { name: 'yu', displayName: '연세대학교', data: yuData, diameter: 410*0.8, color: 'rgba(178, 195, 255, 0.2)', borderColor: 'rgba(178, 195, 255, 1)', trueColor: 'rgba(178, 195, 255, 0.7)' },
+    { name: 'ku', displayName: '고려대학교', data: kuData, diameter: 402*0.8, color: 'rgba(255, 157, 139, 0.2)', borderColor: 'rgba(255, 157, 139, 1)', trueColor: 'rgba(255, 157, 139, 0.7)' },
+    { name: 'ewu', displayName: '이화여자대학교', data: ewuData, diameter: 314*0.8, color: 'rgba(166, 255, 155, 0.2)', borderColor: 'rgba(166, 255, 155, 1)', trueColor: 'rgba(166, 255, 155, 0.7)' },
+    { name: 'stech', displayName: '서울과학기술대학교', data: stechData, diameter: 402*0.8, color: 'rgba(255, 196, 128, 0.2)', borderColor: 'rgba(255, 196, 128, 1)', trueColor: 'rgba(255, 196, 128, 0.7)' }
 ];
 
 const createPieChart = (ctx, data, diameter, color, borderColor, displayName, trueColor) => {
