@@ -139,11 +139,11 @@ const stechData = [
 ];
 
 const universitiesData = [
-    { name: 'snu', displayName: '서울대학교', data: snuData, diameter: 334, color: 'rgba(0, 0, 255, 0.5)', borderColor: 'rgba(0, 0, 255, 0.2)' },
-    { name: 'yu', displayName: '연세대학교', data: yuData, diameter: 410, color: 'rgba(0, 255, 0, 0.5)', borderColor: 'rgba(0, 255, 0, 0.2)' },
-    { name: 'ku', displayName: '고려대학교', data: kuData, diameter: 402, color: 'rgba(255, 0, 0, 0.5)', borderColor: 'rgba(255, 0, 0, 0.2)' },
-    { name: 'ewu', displayName: '이화여자대학교', data: ewuData, diameter: 314, color: 'rgba(255, 165, 0, 0.5)', borderColor: 'rgba(255, 165, 0, 0.2)' },
-    { name: 'stech', displayName: '서울과학기술대학교', data: stechData, diameter: 402, color: 'rgba(128, 0, 128, 0.5)', borderColor: 'rgba(128, 0, 128, 0.2)' }
+    { name: 'snu', displayName: '서울대학교', data: snuData, diameter: 334, color: 'rgba(225, 187, 255, 0.3)', borderColor: 'rgba(225, 187, 255, 1)' },
+    { name: 'yu', displayName: '연세대학교', data: yuData, diameter: 410, color: 'rgba(178, 195, 255, 0.3)', borderColor: 'rgba(178, 195, 255, 1)' },
+    { name: 'ku', displayName: '고려대학교', data: kuData, diameter: 402, color: 'rgba(255, 157, 139, 0.3)', borderColor: 'rgba(255, 157, 139, 1)' },
+    { name: 'ewu', displayName: '이화여자대학교', data: ewuData, diameter: 314, color: 'rgba(166, 255, 155, 0.3)', borderColor: 'rgba(166, 255, 155, 1)' },
+    { name: 'stech', displayName: '서울과학기술대학교', data: stechData, diameter: 402, color: 'rgba(255, 196, 128, 0.3)', borderColor: 'rgba(255, 196, 128, 1)' }
 ];
 
 const createPieChart = (ctx, data, diameter, color, borderColor, displayName) => {
@@ -152,8 +152,8 @@ const createPieChart = (ctx, data, diameter, color, borderColor, displayName) =>
 
     const chartData = [...trueData, ...falseData].map(d => d.value);
     const backgroundColors = [
-        ...trueData.map(() => color), // true인 값들에만 지정된 색상 적용
-        ...falseData.map(() => 'rgba(255, 255, 255, 0.5)') // false인 값들은 반투명 흰색
+        ...trueData.map(() => 'rgba(248, 23, 62, 0.3)'), // true인 값들에만 지정된 색상 적용
+        ...falseData.map(() => color) // false인 값들은 반투명 흰색
     ];
 
     new Chart(ctx, {
