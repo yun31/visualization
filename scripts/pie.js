@@ -139,14 +139,14 @@ const stechData = [
 ];
 
 const universitiesData = [
-    { name: 'snu', displayName: '서울대학교', data: snuData, diameter: 334*0.8, color: 'rgba(225, 187, 255, 0.2)', borderColor: 'rgba(225, 187, 255, 1)', trueColor: 'rgba(225, 187, 255, 0.5)' },
-    { name: 'yu', displayName: '연세대학교', data: yuData, diameter: 410*0.8, color: 'rgba(178, 195, 255, 0.2)', borderColor: 'rgba(178, 195, 255, 1)', trueColor: 'rgba(178, 195, 255, 0.5)' },
-    { name: 'ku', displayName: '고려대학교', data: kuData, diameter: 402*0.8, color: 'rgba(255, 157, 139, 0.2)', borderColor: 'rgba(255, 157, 139, 1)', trueColor: 'rgba(255, 157, 139, 0.5)' },
-    { name: 'ewu', displayName: '이화여자대학교', data: ewuData, diameter: 314*0.8, color: 'rgba(166, 255, 155, 0.2)', borderColor: 'rgba(166, 255, 155, 1)', trueColor: 'rgba(166, 255, 155, 0.5)' },
-    { name: 'stech', displayName: '서울과학기술대학교', data: stechData, diameter: 402*0.8, color: 'rgba(255, 196, 128, 0.2)', borderColor: 'rgba(255, 196, 128, 1)', trueColor: 'rgba(255, 196, 128, 0.5)' }
+    { name: 'snu', displayName: '서울대학교', data: snuData, diameter: 334*0.8, color: 'rgba(198, 125, 255, 0.2)', borderColor: 'rgba(198, 125, 255, 0.7)', trueColor: 'rgba(198, 125, 255, 0.6)', titleColor: 'rgba(198, 125, 255, 1)' },
+    { name: 'yu', displayName: '연세대학교', data: yuData, diameter: 410*0.8, color: 'rgba(120, 150, 255, 0.2)', borderColor: 'rgba(120, 150, 255, 0.7)', trueColor: 'rgba(120, 150, 255, 0.6)', titleColor: 'rgba(120, 150, 255, 1)' },
+    { name: 'ku', displayName: '고려대학교', data: kuData, diameter: 402*0.8, color: 'rgba(255, 116, 90, 0.2)', borderColor: 'rgba(255, 116, 90, 0.7)', trueColor: 'rgba(255, 116, 90, 0.6)', titleColor: 'rgba(255, 116, 90, 1)' },
+    { name: 'ewu', displayName: '이화여자대학교', data: ewuData, diameter: 314*0.8, color: 'rgba(69, 183, 55, 0.2)', borderColor: 'rgba(69, 183, 55, 0.7)', trueColor: 'rgba(69, 183, 55, 0.6)', titleColor: 'rgba(69, 183, 55, 1)' },
+    { name: 'stech', displayName: '서울과학기술대학교', data: stechData, diameter: 402*0.8, color: 'rgba(255, 180, 33, 0.2)', borderColor: 'rgba(255, 180, 33, 0.7)', trueColor: 'rgba(255, 180, 33, 0.6)', titleColor: 'rgba(255, 180, 33, 1)' }
 ];
 
-const createPieChart = (ctx, data, diameter, color, borderColor, displayName, trueColor) => {
+const createPieChart = (ctx, data, diameter, color, borderColor, displayName, trueColor, titleColor) => {
     const trueData = data.filter(d => d.isTrue);
     const falseData = data.filter(d => !d.isTrue);
 
@@ -164,7 +164,7 @@ const createPieChart = (ctx, data, diameter, color, borderColor, displayName, tr
                 data: chartData,
                 backgroundColor: backgroundColors,
                 borderColor: borderColor, // 학교별 구분선 색상 적용
-                borderWidth: 0.4 // 구분선 두께
+                borderWidth: 0.2 // 구분선 두께
             }],
         },
         options: {
@@ -177,10 +177,10 @@ const createPieChart = (ctx, data, diameter, color, borderColor, displayName, tr
                 title: {
                     display: true,
                     text: displayName,
-                    color: '#32386A',
+                    color: titleColor,
                     font: {
                         size: 18,
-                        weight: 400
+                        weight: 500
                     }
                 }
             },
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const pieChartContainer = document.getElementById(`pie-chart-${uni.name}`);
         if (pieChartContainer) {
             const ctx = pieChartContainer.appendChild(document.createElement('canvas')).getContext('2d');
-            createPieChart(ctx, uni.data, uni.diameter, uni.color, uni.borderColor, uni.displayName, uni.trueColor);
+            createPieChart(ctx, uni.data, uni.diameter, uni.color, uni.borderColor, uni.displayName, uni.trueColor, uni.titleColor);
         }
     });
 });
