@@ -107,13 +107,25 @@
         <h1>어느 학교의 경사로 총합이 가장 클까?</h1>
     </div>
 
-    <!-- Pie charts container -->
-    <div class="pie-charts-container">
-        <div class="pie-chart" id="pie-chart-snu"></div>
-        <div class="pie-chart" id="pie-chart-yu"></div>
-        <div class="pie-chart" id="pie-chart-ku"></div>
-        <div class="pie-chart" id="pie-chart-ewu"></div>
-        <div class="pie-chart" id="pie-chart-stech"></div>
+    <div class="container">
+        <div class="description-box">
+            <div class="legend">
+                <h1>Legend</h1>
+                <img src="images/pie.png">
+                <p>각 학교 별로 실제 경사로의 총 길이 중, 표준 기준인 
+                    <span style="color:#5874C7; font-weight: 500;">기울기 1/18을 초과하는 경사로의 길이가 차지하는 비율</span>
+                        을 한 눈에 비교할 수 있다.</p>
+            </div>
+        </div>
+        <div class="pie-box">
+            <div class="pie-charts-container">
+                <div class="pie-chart" id="pie-chart-snu"></div>
+                <div class="pie-chart" id="pie-chart-yu"></div>
+                <div class="pie-chart" id="pie-chart-ku"></div>
+                <div class="pie-chart" id="pie-chart-ewu"></div>
+                <div class="pie-chart" id="pie-chart-stech"></div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
