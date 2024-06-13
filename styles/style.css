@@ -426,7 +426,13 @@ svg {
 
 .top-box {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.top-box img {
+    width: 446px;
 }
 
 .text-box-pink {
@@ -441,8 +447,8 @@ svg {
     padding: 40px 30px;
     font-size: 18px;
     line-height: 1.6;
-    flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
-    min-width: 400px; /* 최소 너비 설정 */
+    flex:1;
+    min-width: 310px;
     /* max-width: 800px; */
 }
 
