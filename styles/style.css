@@ -421,13 +421,12 @@ svg {
     margin-top: 45px;
     margin-left: 30px;
     margin-right: 30px;
+    gap: 30px;
 }
 
 .top-box {
     display: flex;
-    align-items: flex-start;
-    background-color: none;
-    padding: 50px;
+    gap: 30px;
 }
 
 .text-box-pink {
@@ -470,7 +469,7 @@ svg {
 }
 
 .box-category-image {
-    margin-top: 90px;
+    margin-top: 60px;
     display: flex;
     flex: 1;
     padding-left: 30px;
