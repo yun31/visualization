@@ -376,7 +376,7 @@ svg {
 }
 
 .left-box .image-box:last-child {
-    margin-bottom: 0px; /* left-box의 마지막 이미지 박스 아래의 여백을 50px로 설정합니다 */
+    margin-bottom: 0px;
 }
 
 .right-box {
@@ -416,10 +416,18 @@ svg {
 .content2 {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     margin-top: 45px;
     margin-left: 30px;
     margin-right: 30px;
+}
+
+.top-box {
+    display: flex;
+    align-items: flex-start;
+    background-color: none;
+    padding: 50px;
 }
 
 .text-box-pink {
@@ -437,6 +445,41 @@ svg {
     flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
     min-width: 400px; /* 최소 너비 설정 */
     /* max-width: 800px; */
+}
+
+.box-categroy {
+    display: flex; /* flexbox를 사용하여 한 줄에 배치 */
+    gap: 10px; /* flex 아이템 간의 간격 설정 */
+}
+
+.category {
+    display: inline-block; /* 한 줄에 배치하기 위해 사용 */
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #FFE3FF;
+    border-radius: 25px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF7AFD;
+    padding: 4px 12px;
+}
+
+.category:last-child {
+    margin-right: 0px;
+}
+
+.box-category-image {
+    margin-top: 90px;
+    display: flex;
+    flex: 1;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 50px;
+}
+
+.box-category-image img{
+    height: 80px;
 }
 
 .pie-charts-container {
