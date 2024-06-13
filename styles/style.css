@@ -462,6 +462,41 @@ svg {
     /* max-width: 800px; */
 }
 
+.box-categroy {
+    display: flex; /* flexbox를 사용하여 한 줄에 배치 */
+    gap: 10px; /* flex 아이템 간의 간격 설정 */
+}
+
+.category {
+    display: inline-block; /* 한 줄에 배치하기 위해 사용 */
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #FFE3FF;
+    border-radius: 25px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF7AFD;
+    padding: 4px 12px;
+}
+
+.category:last-child {
+    margin-right: 0px;
+}
+
+.box-category-image {
+    margin-top: 60px;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex: 1 1 0%;
+    gap: 50px;
+}
+
+.box-category-image img{
+    height: 80px;
+}
+
 .description-box {
     flex: 3;
     padding: 12px;
