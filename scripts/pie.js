@@ -139,21 +139,21 @@ const stechData = [
 ];
 
 const universitiesData = [
-    { name: 'snu', displayName: '서울대학교', data: snuData, diameter: 334, color: 'rgba(225, 187, 255, 0.3)', borderColor: 'rgba(225, 187, 255, 1)' },
-    { name: 'yu', displayName: '연세대학교', data: yuData, diameter: 410, color: 'rgba(178, 195, 255, 0.3)', borderColor: 'rgba(178, 195, 255, 1)' },
-    { name: 'ku', displayName: '고려대학교', data: kuData, diameter: 402, color: 'rgba(255, 157, 139, 0.3)', borderColor: 'rgba(255, 157, 139, 1)' },
-    { name: 'ewu', displayName: '이화여자대학교', data: ewuData, diameter: 314, color: 'rgba(166, 255, 155, 0.3)', borderColor: 'rgba(166, 255, 155, 1)' },
-    { name: 'stech', displayName: '서울과학기술대학교', data: stechData, diameter: 402, color: 'rgba(255, 196, 128, 0.3)', borderColor: 'rgba(255, 196, 128, 1)' }
+    { name: 'snu', displayName: '서울대학교', data: snuData, diameter: 334*0.8, color: 'rgba(225, 187, 255, 0.2)', borderColor: 'rgba(225, 187, 255, 1)', trueColor: 'rgba(225, 187, 255, 0.5)' },
+    { name: 'yu', displayName: '연세대학교', data: yuData, diameter: 410*0.8, color: 'rgba(178, 195, 255, 0.2)', borderColor: 'rgba(178, 195, 255, 1)', trueColor: 'rgba(178, 195, 255, 0.5)' },
+    { name: 'ku', displayName: '고려대학교', data: kuData, diameter: 402*0.8, color: 'rgba(255, 157, 139, 0.2)', borderColor: 'rgba(255, 157, 139, 1)', trueColor: 'rgba(255, 157, 139, 0.5)' },
+    { name: 'ewu', displayName: '이화여자대학교', data: ewuData, diameter: 314*0.8, color: 'rgba(166, 255, 155, 0.2)', borderColor: 'rgba(166, 255, 155, 1)', trueColor: 'rgba(166, 255, 155, 0.5)' },
+    { name: 'stech', displayName: '서울과학기술대학교', data: stechData, diameter: 402*0.8, color: 'rgba(255, 196, 128, 0.2)', borderColor: 'rgba(255, 196, 128, 1)', trueColor: 'rgba(255, 196, 128, 0.5)' }
 ];
 
-const createPieChart = (ctx, data, diameter, color, borderColor, displayName) => {
+const createPieChart = (ctx, data, diameter, color, borderColor, displayName, trueColor) => {
     const trueData = data.filter(d => d.isTrue);
     const falseData = data.filter(d => !d.isTrue);
 
     const chartData = [...trueData, ...falseData].map(d => d.value);
     const backgroundColors = [
-        ...trueData.map(() => 'rgba(248, 23, 62, 0.3)'), // true인 값들에만 지정된 색상 적용
-        ...falseData.map(() => color) // false인 값들은 반투명 흰색
+        ...trueData.map(() => trueColor), // true인 값들에만 지정된 색상 적용
+        ...falseData.map(() => color) // false인 값들에만 지정된 색상 적용
     ];
 
     new Chart(ctx, {
@@ -177,8 +177,10 @@ const createPieChart = (ctx, data, diameter, color, borderColor, displayName) =>
                 title: {
                     display: true,
                     text: displayName,
+                    color: '#32386A',
                     font: {
-                        size: 16
+                        size: 18,
+                        weight: 400
                     }
                 }
             },
@@ -200,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const pieChartContainer = document.getElementById(`pie-chart-${uni.name}`);
         if (pieChartContainer) {
             const ctx = pieChartContainer.appendChild(document.createElement('canvas')).getContext('2d');
-            createPieChart(ctx, uni.data, uni.diameter, uni.color, uni.borderColor, uni.displayName);
+            createPieChart(ctx, uni.data, uni.diameter, uni.color, uni.borderColor, uni.displayName, uni.trueColor);
         }
     });
 });
