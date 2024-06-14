@@ -129,6 +129,8 @@ p {
 .container {
     display: flex;
     align-items: flex-start;
+    margin-left: 3%;
+    margin-right: 3%;
     width: 100%;
     background-color: #FBFBFD;
 }
@@ -140,7 +142,6 @@ p {
     z-index: 10;
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
     height: 100%;
     background-color: #FBFBFD;
 }
@@ -152,7 +153,6 @@ p {
     z-index: 10;
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
     height: 100%;
     background-color: #FBFBFD;
 }
@@ -641,4 +641,3 @@ svg {
     top: 250px;
     left: 0px
 }
-
