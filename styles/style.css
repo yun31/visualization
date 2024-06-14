@@ -1,11 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-.intro {
-    text-align: center;
-    padding: 50px 20px;
-    position: relative
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -20,24 +14,44 @@ body {
     display: flex;
     flex-direction: column;
     color: #32386A;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    align-items: center;
 }
 
-h1 {
-    margin-top: 100px;
+.intro {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1800px;
+    padding: 50px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro h1 {
+    margin-top: 8%;
     font-size: 48px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-h2 {
-    margin-top: 10px;
+.intro h2 {
+    margin-top: 1%;
     font-weight: 300;
     font-size: 32px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-p {
-    margin-top: 100px;
-    margin-bottom: 120px;
-    margin-left: 240px;
-    margin-right: 240px;
+.intro p {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
     transition: margin 0.4s ease; /* gap 변화를 0.3초 동안 부드럽게 설정 */
     font-weight: 400;
     font-size: 18px;
@@ -52,8 +66,7 @@ p {
 }
 
 .chart-name {
-    text-align: left; 
-    margin-top: 36px;
+    margin-top: 100px;
     margin-bottom: 36px; 
     margin-left: 60px; 
     margin-right: 60px; 
@@ -61,6 +74,7 @@ p {
 }
 
 .chart-name h1 {
+    text-align: center; 
     position: relative;
     font-weight: 600;
     font-size: 32px;
@@ -70,7 +84,7 @@ p {
 
 .chart-name svg {
     position: absolute;
-    transform: translateY(420%);
+    transform: translateY(140%);
     z-index: 0;
 }
 
@@ -129,16 +143,17 @@ p {
 .container {
     display: flex;
     align-items: flex-start;
-    margin-left: 3%;
-    margin-right: 3%;
     width: 100%;
     background-color: #FBFBFD;
+    padding-bottom: 60px;
 }
 
 .labels {
     position: sticky;
     left: 0;
     top: 0;
+    margin-left: 40px;
+    margin-right: 16px;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -150,6 +165,9 @@ p {
     position: sticky;
     left: 0;
     top: 0;
+    margin-left: 40px;
+    margin-right: 16px;
+    margin-right: 16px;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -217,6 +235,9 @@ p {
     overflow: hidden;  /* 애니메이션 시 요소가 흐르지 않도록 설정 */
 }
 
+canvas {
+    background-color: #fff;
+}
 
 .triangle {
     stroke: none;
@@ -406,11 +427,12 @@ svg {
     align-items: center;
     justify-content: center;
     /*flex-direction: row;*/
-    padding: 40px 30px;
+    padding: 40px 60px;
     font-size: 18px;
     line-height: 1.6;
     flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
-    min-width: 400px; /* 최소 너비 설정 */
+    margin-top: 60px;
+    min-width: 800px; /* 최소 너비 설정 */
     /* max-width: 800px; */
 }
 
@@ -437,12 +459,27 @@ svg {
 .top-box {
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: center;
     gap: 60px;
 }
 
 .top-box img {
-    width: 446px;
+    display: block; /* 이미지를 블록 요소로 설정 */
+    width: 530px; /* 이미지 너비를 부모 요소에 맞춤 */
+    height: auto; /* 이미지 높이를 비율에 맞게 자동 설정 */
+}
+
+.top-box svg {
+    position: absolute; /* 절대 위치로 설정하여 부모 요소를 기준으로 배치 */
+    width: 10; /* SVG 너비를 부모 요소에 맞춤 */
+    top: 57%;
+    left: 11%;
+    height: auto; /* SVG 높이를 비율에 맞게 자동 설정 */
+}
+
+.top-box path {
+    transition: d 3s ease; /* 부드러운 전환 효과 추가 */
 }
 
 .text-box-pink {
@@ -463,8 +500,9 @@ svg {
 }
 
 .box-categroy {
+    align-items: center;
     display: flex; /* flexbox를 사용하여 한 줄에 배치 */
-    gap: 10px; /* flex 아이템 간의 간격 설정 */
+    gap: 16px; /* flex 아이템 간의 간격 설정 */
 }
 
 .category {
@@ -480,17 +518,9 @@ svg {
     padding: 4px 12px;
 }
 
-.category:last-child {
-    margin-right: 0px;
-}
-
 .box-category-image {
     margin-top: 60px;
-    display: flex;
-    padding-left: 30px;
-    padding-right: 30px;
     flex: 1 1 0%;
-    gap: 50px;
 }
 
 .box-category-image img{
@@ -498,12 +528,14 @@ svg {
 }
 
 .description-slope{
-    margin-top: 120px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     display: flex;
-    gap: 100px;
     flex: 1;
-    padding-left: 60px;
-    padding-right: 60px;
+    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #fff;
 }
 
 .slope-left-box {
@@ -512,6 +544,7 @@ svg {
     flex-direction: column;
     flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
     gap: 60px;
+    margin-left: 120px;
     min-width: 600px; /* 최소 너비 설정 */
 }
 
@@ -538,7 +571,7 @@ svg {
 }
 
 .slope-content {
-    width: 500px;
+    width: 400px;
     display: flex;
     flex: 1;
     margin-top: 20px;
@@ -549,11 +582,11 @@ svg {
 
 .slope-right-box {
     margin-top: 45px;
+    margin-right: 100px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
 }
 
 .slope-right-box img{
@@ -600,7 +633,6 @@ svg {
 .pie-box {
     flex: 7;
     margin: 0;
-    padding: 0;
 }
 
 .pie-charts-container {

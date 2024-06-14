@@ -195,6 +195,7 @@ const createPieChart = (ctx, data, diameter, color, borderColor, displayName, tr
 
     ctx.canvas.style.width = `${diameter}px`;
     ctx.canvas.style.height = `${diameter}px`;
+    ctx.canvas.style.backgroundColor = 'transparent';
 };
 
 document.addEventListener('DOMContentLoaded', () => {
