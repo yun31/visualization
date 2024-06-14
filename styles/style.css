@@ -233,6 +233,7 @@ body {
     height: 720px;
     position: relative;
     overflow: hidden;  /* 애니메이션 시 요소가 흐르지 않도록 설정 */
+    /* background: linear-gradient(90deg, rgba(152, 194, 235, 0.1) 0%, rgba(233, 134, 230, 0.1) 100%); */
 }
 
 canvas {

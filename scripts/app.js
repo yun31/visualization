@@ -170,8 +170,8 @@ const categoryColors = {
     'A': '#EBECEF',
     'B': '#CFD2DC',
     'C': '#99A0B3',
-    'D': 'rgba(248, 23, 62, 0.40)',
-    'E': 'rgba(248, 23, 62, 0.60)',
+    'D': '#FFCBD4',
+    'E': '#FB8B9E',
     'F': 'rgba(248, 23, 62, 0.80)'
 };
 
