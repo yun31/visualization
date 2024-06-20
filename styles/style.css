@@ -723,3 +723,10 @@ svg {
     top: 250px;
     left: 0px
 }
+
+.container object {
+    width: 50%;
+    margin-top: 24px;
+    margin-left: 60px;
+    margin-right: 16x;
+}
