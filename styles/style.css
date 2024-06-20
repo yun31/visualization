@@ -89,6 +89,17 @@ body {
     width:36px;
 }
 
+.circle-chart-name-container {
+    position: relative;
+    width: fit-content;
+}
+
+.circle-chart-name-container img{
+    display: block;
+    width: 100%;
+    max-height: 400px;
+}
+
 .chart-name h1 {
     text-align: center; 
     position: relative;
@@ -602,7 +613,7 @@ svg {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex: 4; 
+    flex: 1; /* 가용 가능한 공간을 차지하도록 설정 */
     gap: 60px;
     margin-left: 120px;
     min-width: 600px; /* 최소 너비 설정 */
@@ -610,6 +621,8 @@ svg {
 
 .slope-head {
     text-align: left;
+    /* margin-top: 120px; */
+    /* position: absolute; */
 }
 
 .slope-head .arrow-divider {
@@ -629,27 +642,26 @@ svg {
 }
 
 .slope-content {
-    max-width: 70%;
+    width: 400px;
     display: flex;
     flex: 1;
-    margin-top: 8px;
+    margin-top: 20px;
     text-align: center;
     font-size: 18px;
     line-height: 1.6;
 }
 
 .slope-right-box {
-    flex: 6;
+    margin-top: 45px;
+    margin-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 16px
+    gap: 10px;
 }
 
-.slope-right-box img {
-    max-width: 90%;
-    height: auto;
-    margin-right: 100px
+.slope-right-box img{
+    height: 500px;
 }
 
 .description-box {
@@ -692,6 +704,7 @@ svg {
 
 .pie-box {
     flex: 7;
+    margin: 0;
 }
 
 .pie-charts-container {
@@ -703,8 +716,8 @@ svg {
 }
 
 .pie-chart {
+    margin: 0;
     padding: 0;
-    max-width: 60%;
     position: absolute;
 }
 
@@ -735,7 +748,7 @@ svg {
 
 .container object {
     width: 50%;
-    margin-top: 36px;
+    margin-top: 24px;
     margin-left: 60px;
     margin-right: 16x;
 }
