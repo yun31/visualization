@@ -596,7 +596,6 @@ svg {
 }
 
 .description-slope{
-    padding-top: 100px;
     padding-bottom: 100px;
     display: flex;
     flex: 1;
@@ -693,7 +692,6 @@ svg {
 .legend img {
     max-width: 90%;
     height: auto;
-    margin: 24px
 }
 
 .legend p {
@@ -750,7 +748,6 @@ svg {
 
 .container object {
     width: 50%;
-    margin-top: 24px;
     margin-left: 60px;
     margin-right: 16x;
 }
