@@ -167,12 +167,12 @@ const triangleColors = {
 };
 
 const categoryColors = {
-    'A': '#EBECEF',
-    'B': '#CFD2DC',
-    'C': '#99A0B3',
-    'D': '#FFCBD4',
-    'E': '#FB8B9E',
-    'F': 'rgba(248, 23, 62, 0.80)'
+    'A': '#CFD2DC',
+    'B': '#99A0B3',
+    'C': '#848B9F',
+    'D': '#FFA0B0',
+    'E': '#FF6882',
+    'F': '#F8173E'
 };
 
 const svgWidth = 3360;  // Sufficient width
