@@ -97,6 +97,15 @@ body {
     z-index: 1;
 }
 
+.chart-name h2 {
+    text-align: center; 
+    position: relative;
+    font-weight: 300;
+    font-size: 24px;
+    padding: 0;
+    z-index: 1;
+}
+
 .chart-name p {
     position: relative;
     font-weight: 400;
