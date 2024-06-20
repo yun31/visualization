@@ -66,3 +66,17 @@ document.getElementById('toggle-animation').addEventListener('click', () => {
         });
     }, 2000); // 3초 후에 다시 원래 크기로 돌아감
 });
+
+// x-scroll indicator
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollContainer = document.querySelector('.scroll-x');
+    const xscrollIndicator = document.getElementById('x-scroll-indicator');
+
+    scrollContainer.addEventListener('scroll', function() {
+        if (scrollContainer.scrollLeft > 0) {
+            xscrollIndicator.style.display = 'none';
+        } else {
+            xscrollIndicator.style.display = 'flex';
+        }
+    });
+});

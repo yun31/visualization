@@ -222,6 +222,7 @@ body {
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    position: relative;
 }
 
 .scroll-x::-webkit-scrollbar {
@@ -234,6 +235,54 @@ body {
     position: relative;
     overflow: hidden;  /* 애니메이션 시 요소가 흐르지 않도록 설정 */
     /* background: linear-gradient(90deg, rgba(152, 194, 235, 0.1) 0%, rgba(233, 134, 230, 0.1) 100%); */
+}
+
+.x-scroll-indicator {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 200px; /* 디자인에 맞게 조정 */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 63%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 10;
+    font-size: 18px;
+    font-weight: 300;
+    color: #32386A;
+    text-align: center;
+
+}
+
+
+.x-scroll-indicator span {
+    animation: bounceX 2s infinite;
+}
+
+.x-scroll-indicator::after {
+    content: '';
+    border: solid #32386A;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(-45deg);
+    margin-left: 10px; /* 텍스트와 화살표 사이의 간격 */
+}
+
+
+@keyframes bounceX {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-10px);
+    }
+    60% {
+        transform: translateX(10px);
+    }
 }
 
 canvas {
