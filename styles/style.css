@@ -763,7 +763,7 @@ svg {
 
 .tooltip {
     visibility: hidden;
-    width: 800px; /* 툴팁 박스의 너비 */
+    width: 820px; /* 툴팁 박스의 너비 */
     border: 1px solid #A0B1FF;
     border-radius: 50px;
     background-color: white;
