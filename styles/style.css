@@ -593,7 +593,7 @@ svg {
 }
 
 .box-category-image img{
-    height: 80px;
+    max-height: 400px;
 }
 
 .description-slope{
