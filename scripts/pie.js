@@ -139,11 +139,11 @@ const stechData = [
 ];
 
 const universitiesData = [
-    { name: 'snu', displayName: '서울대학교', data: snuData, diameter: 334*0.8, color: 'rgba(198, 125, 255, 0.2)', borderColor: 'rgba(198, 125, 255, 0.7)', trueColor: 'rgba(198, 125, 255, 0.6)', titleColor: 'rgba(198, 125, 255, 1)' },
-    { name: 'yu', displayName: '연세대학교', data: yuData, diameter: 410*0.8, color: 'rgba(120, 150, 255, 0.2)', borderColor: 'rgba(120, 150, 255, 0.7)', trueColor: 'rgba(120, 150, 255, 0.6)', titleColor: 'rgba(120, 150, 255, 1)' },
-    { name: 'ku', displayName: '고려대학교', data: kuData, diameter: 402*0.8, color: 'rgba(255, 116, 90, 0.2)', borderColor: 'rgba(255, 116, 90, 0.7)', trueColor: 'rgba(255, 116, 90, 0.6)', titleColor: 'rgba(255, 116, 90, 1)' },
-    { name: 'ewu', displayName: '이화여자대학교', data: ewuData, diameter: 314*0.8, color: 'rgba(69, 183, 55, 0.2)', borderColor: 'rgba(69, 183, 55, 0.7)', trueColor: 'rgba(69, 183, 55, 0.6)', titleColor: 'rgba(69, 183, 55, 1)' },
-    { name: 'stech', displayName: '서울과학기술대학교', data: stechData, diameter: 402*0.8, color: 'rgba(255, 180, 33, 0.2)', borderColor: 'rgba(255, 180, 33, 0.7)', trueColor: 'rgba(255, 180, 33, 0.6)', titleColor: 'rgba(255, 180, 33, 1)' }
+    { name: 'snu', displayName: 'Seoul National University', data: snuData, diameter: 334*0.8, color: 'rgba(158, 45, 247, 0.2)', borderColor: 'rgba(158, 45, 247, 0.7)', trueColor: 'rgba(158, 45, 247, 0.6)', titleColor: 'rgba(158, 45, 247, 1)' },
+    { name: 'yu', displayName: 'Yonsei University', data: yuData, diameter: 410*0.8, color: 'rgba(71, 112, 255, 0.2)', borderColor: 'rgba(71, 112, 255, 0.7)', trueColor: 'rgba(71, 112, 255, 0.6)', titleColor: 'rgba(71, 112, 255, 1)' },
+    { name: 'ku', displayName: 'Korea University', data: kuData, diameter: 402*0.8, color: 'rgba(250, 86, 56, 0.2)', borderColor: 'rgba(250, 86, 56, 0.7)', trueColor: 'rgba(250, 86, 56, 0.6)', titleColor: 'rgba(250, 86, 56, 1)' },
+    { name: 'ewu', displayName: 'Ewha Womans University', data: ewuData, diameter: 314*0.8, color: 'rgba(69, 239, 48, 0.2)', borderColor: 'rgba(69, 239, 48, 0.7)', trueColor: 'rgba(69, 239, 48, 0.6)', titleColor: 'rgba(69, 239, 48, 1)' },
+    { name: 'stech', displayName: 'Seoul Tech', data: stechData, diameter: 402*0.8, color: 'rgba(250, 140, 13, 0.2)', borderColor: 'rgba(250, 140, 13, 0.7)', trueColor: 'rgba(250, 140, 13, 0.6)', titleColor: 'rgba(250, 140, 13, 1)' }
 ];
 
 const createPieChart = (ctx, data, diameter, color, borderColor, displayName, trueColor, titleColor) => {
@@ -177,10 +177,11 @@ const createPieChart = (ctx, data, diameter, color, borderColor, displayName, tr
                 title: {
                     display: true,
                     text: displayName,
-                    color: titleColor,
+                    color: "#32386A",
                     font: {
+                        family: 'Abel, sans-serif', // Abel 폰트 적용
                         size: 18,
-                        weight: 500
+                        weight: 200
                     }
                 }
             },

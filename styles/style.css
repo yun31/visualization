@@ -684,6 +684,7 @@ svg {
 }
 
 .legend p {
+    color: #565353;
     font-size: 17px;
     line-height: 1.6;
     text-align: left;
@@ -725,7 +726,7 @@ svg {
 }
 
 #pie-chart-ewu {
-    top: 300px; 
+    top: 340px; 
     left: 470px; 
 }
 
