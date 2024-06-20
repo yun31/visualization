@@ -763,7 +763,7 @@ svg {
 
 .tooltip {
     visibility: hidden;
-    width: 820px; /* 툴팁 박스의 너비 */
+    width: 840px; /* 툴팁 박스의 너비 */
     border: 1px solid #A0B1FF;
     border-radius: 50px;
     background-color: white;
@@ -772,7 +772,7 @@ svg {
     font-size: 18px;
     line-height: 1.6;
     flex: 1;
-    padding: 30px 60px;
+    padding: 30px 50px;
     position: absolute;
     z-index: 1;
     top: 110%; /* 이미지 아래에 툴팁이 나타나도록 위치 조정 */
