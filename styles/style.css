@@ -53,7 +53,7 @@ body {
     margin-left: 20%;
     margin-right: 20%;
     transition: margin 0.4s ease; /* gap 변화를 0.3초 동안 부드럽게 설정 */
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
     line-height: 1.6;
 }
